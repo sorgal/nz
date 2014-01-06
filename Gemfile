@@ -50,3 +50,13 @@ gem "therubyracer"
 gem "twitter-bootstrap-rails"
 
 gem "slim-rails"
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+end
+
+gem "factory_girl_rails", "~> 4.0"
+
+gem "capybara"
+
+gem 'selenium-webdriver'
