@@ -60,3 +60,5 @@ gem "factory_girl_rails", "~> 4.0"
 gem "capybara"
 
 gem 'selenium-webdriver'
+
+gem 'activeadmin', github: 'gregbell/active_admin'

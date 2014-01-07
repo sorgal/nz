@@ -24,12 +24,6 @@ html lang="en"
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          a.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse"
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.brand href="#"Nz
-          .container.nav-collapse
             ul.nav
               - if user_signed_in?
                 li = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'
@@ -47,14 +41,4 @@ html lang="en"
         .span9
           = bootstrap_flash
           = yield
-        .span3
-          .well.sidebar-nav
-            h3 Sidebar
-            ul.nav.nav-list
-              li.nav-header Sidebar
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
-    
-      footer
-        p &copy; Company 2013
+
