@@ -1,4 +1,8 @@
 Nz::Application.routes.draw do
+  resources :admin_games
+
+  resources :games
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :articles

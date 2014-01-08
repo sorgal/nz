@@ -38,7 +38,6 @@ describe ArticlesController do
                                    content: "content_article_#{count_helper}")
 
       get :index, {}, valid_session
-      puts assigns(:articles)
       expect(assigns(:articles)).to eq([article])
     end
   end
