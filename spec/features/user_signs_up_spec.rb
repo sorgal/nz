@@ -1,8 +1,10 @@
 require 'spec_helper'
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
 
 describe "the sign in and sign up process", :type => :feature, :js => true do
   before :each do
-    random = rand(max = 1000)
+    random = rand(1000)
     @user = FactoryGirl.build(:user, :email => "user#{random}@user.com", :password => "1234567890").attributes
   end
 

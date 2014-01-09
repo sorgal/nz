@@ -1,7 +1,6 @@
 class AdminGamesController < ApplicationController
   before_action :set_admin_game, only: [:show, :edit, :update, :destroy]
 
-
   # GET /admin_games
   # GET /admin_games.json
   def index

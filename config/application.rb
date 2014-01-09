@@ -25,5 +25,9 @@ module Nz
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.app_generators.scaffold_controller = :scaffold_controller
+    config.to_prepare do
+      Devise::SessionsController.skip_before_filter :authorize_admin
+      Devise::RegistrationsController.skip_before_filter :authorize_admin
+    end
   end
 end

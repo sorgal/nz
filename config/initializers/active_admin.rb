@@ -232,4 +232,6 @@ ActiveAdmin.setup do |config|
   #
   # config.filters = true
 
+  config.skip_before_filter :authorize_admin
+
 end

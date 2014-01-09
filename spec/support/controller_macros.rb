@@ -2,7 +2,7 @@ module ControllerMacros
   def login_admin
     before(:each) do
       @request.env["devise.mapping"] = Devise.mappings[:admin]
-      sign_in FactoryGirl.build(:admin_user) # Using factory girl as an example
+      sign_in FactoryGirl.create(:admin_user, email: "admin#{rand(1000)}@example.com}") # Using factory girl as an example
     end
   end
 
